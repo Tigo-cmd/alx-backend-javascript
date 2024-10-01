@@ -1,3 +1,4 @@
-import { taskFirst, taskNext } from './0-constants';
+import { taskblock } from './1-block-scoped';
 
-console.log(`${taskFirst()} ${taskNext()}`);
+console.log(taskblock(true));
+console.log(taskblock(false));
