@@ -1,3 +1,3 @@
-import getBudgetObject from './7-getBudgetObject';
+import getBudgetForCurrentYear from './8-getBudgetCurrentYear';
 
-console.log(getBudgetObject(400, 400, 700));
+console.log(getBudgetForCurrentYear(2100, 5200, 1090));
