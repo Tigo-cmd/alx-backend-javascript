@@ -1,3 +1,8 @@
-import getBudgetForCurrentYear from './8-getBudgetCurrentYear';
+import getFullBujectObject from './9-getFullBudget';
 
-console.log(getBudgetForCurrentYear(2100, 5200, 1090));
+const fullBudget = getFullBujectObject(100, 43, 22);
+
+const dollars = fullBudget.getIncomeDollars(fullBudget.income);
+const euros = fullBudget.getIncomeInEuros(fullBudget.income);
+
+console.log(dollars, euros);
