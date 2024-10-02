@@ -1,3 +1,3 @@
-import returnHowManyArguments from './4-rest-parameter';
+import concatArrays from './5-spread-operator';
 
-console.log(returnHowManyArguments('2523535'));
+console.log(concatArrays(['a', 'b'], ['c', 'd'], 'Hello'));
