@@ -1,4 +1,4 @@
-import { taskblock } from './1-block-scoped';
+import taskBlock from './1-block-scoped';
 
-console.log(taskblock(true));
-console.log(taskblock(false));
+console.log(taskBlock(true));
+console.log(taskBlock(false));
