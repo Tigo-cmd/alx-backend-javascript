@@ -1,3 +1,3 @@
-import appendToEachArrayValue from './10-loops';
+import createEmployeesObject from './11-createEmployeesObject';
 
-console.log(appendToEachArrayValue(['appended', 'fixed', 'displayed'], 'correctly-'));
+console.log(createEmployeesObject('Software', ['Bob', 'Sylvie']));
