@@ -1,8 +1,6 @@
-import getFullBujectObject from './9-getFullBudget';
+import getFullBudgetObject from './9-getFullBudget';
 
-const fullBudget = getFullBujectObject(100, 43, 22);
+const fullBudget = getFullBudgetObject(20, 50, 10);
 
-const dollars = fullBudget.getIncomeDollars(fullBudget.income);
-const euros = fullBudget.getIncomeInEuros(fullBudget.income);
-
-console.log(dollars, euros);
+console.log(fullBudget.getIncomeInDollars(fullBudget.income));
+console.log(fullBudget.getIncomeInEuros(fullBudget.income));
