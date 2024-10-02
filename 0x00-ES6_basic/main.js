@@ -1,4 +1,5 @@
-import taskBlock from './1-block-scoped';
+import getNeighborhoodsList from './2-arrow';
 
-console.log(taskBlock(true));
-console.log(taskBlock(false));
+const neighboorhoodList = new getNeighborhoodsList();
+const res = neighboorhoodList.addNeighborhood('ikeja');
+console.log(res);
