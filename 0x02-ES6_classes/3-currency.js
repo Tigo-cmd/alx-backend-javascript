@@ -1,9 +1,9 @@
 export default class Currency {
   constructor(code, name) {
-    if (typeof name !== 'number') {
-      throw new TypeError('Code must be a string');
+    if (typeof name !== 'string') {
+      throw new TypeError('name must be a string');
     }
-    if (typeof code !== 'number') {
+    if (typeof code !== 'string') {
       throw new TypeError('Code must be a string');
     }
     /* eslint-disable no-underscore-dangle */
@@ -16,7 +16,7 @@ export default class Currency {
   }
 
   set code(value) {
-    if (typeof value !== 'number') {
+    if (typeof value !== 'string') {
       throw new TypeError('Code must be a string');
     }
     this._code = value;
@@ -27,7 +27,7 @@ export default class Currency {
   }
 
   set name(value) {
-    if (typeof value !== 'number') {
+    if (typeof value !== 'string') {
       throw new TypeError('Code must be a string');
     }
     this._name = value;
