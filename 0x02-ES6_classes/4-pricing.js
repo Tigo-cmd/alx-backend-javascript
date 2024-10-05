@@ -5,9 +5,9 @@ export default class Pricing {
     if (typeof amount !== 'number') {
       throw new TypeError('Amount must be a number');
     }
-    if (!(currency instanceof Currency)) {
-      throw new TypeError('Currency must be a Currency');
-    }
+    // if (!(currency instanceof Currency)) {
+    //   throw new TypeError('Currency must be a Currency');
+    // }
 
     /* eslint-disable no-underscore-dangle */
     this._amount = amount;
@@ -30,9 +30,9 @@ export default class Pricing {
   }
 
   set currency(value = new Currency()) {
-    if (!(value instanceof Currency)) {
-      throw new TypeError('Currency must be a Currency');
-    }
+    // if (!(value instanceof Currency)) {
+    //   throw new TypeError('Currency must be a Currency');
+    // }
     this._currency = value;
   }
 
