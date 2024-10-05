@@ -11,7 +11,7 @@ export default class HolbertonClass {
 
   get location() { return this._location; }
 
-  set location(value) { if (typeof value !== 'string') { throw new TypeError('Location must be a string');} this._location = value; }
+  set location(value) { if (typeof value !== 'string') { throw new TypeError('Location must be a string'); } this._location = value; }
 
   valueOf() { return this._size; }
 
