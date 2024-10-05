@@ -24,7 +24,7 @@ export default class Pricing {
 
   set amount(value) {
     if (typeof value !== 'number') {
-      throw new TypeError('amount must be a string');
+      throw new TypeError('amount must be a number');
     }
     this._amount = value;
   }
@@ -38,5 +38,15 @@ export default class Pricing {
 
   displayFullPrice() {
     return `${this.amount} ${this._currency._name} (${this._currency._code})`;
+  }
+
+  static convertPrice(amount, conversionRate) {
+    if (typeof value !== 'number') {
+      throw new TypeError('Amount must be a number');
+    }
+    if (typeof value !== 'number') {
+      throw new TypeError('ConversionRate must be a number');
+    }
+    return amount * conversionRate;
   }
 }
