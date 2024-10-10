@@ -65,3 +65,12 @@ export function createEmployee(salary: (number | string)): (DirectorInterface | 
   const teacher = new Teacher()
   return teacher.workTeacherTasks();
  }
+
+export type Subjects = 'Math' | 'History';
+export function teachClass(todayClass: Subjects) {
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
+  }
+
+  return  'Teaching History';
+}
