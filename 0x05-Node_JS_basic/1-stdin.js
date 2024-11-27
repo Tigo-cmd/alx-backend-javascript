@@ -5,7 +5,7 @@ process.stdin.setEncoding('utf-8');
 
 process.stdin.on('data', (input) => {
   const name = input.trim(); // Remove extra spaces and newlines
-  process.stdout.write(`Your name is: ${name}\r`);
+  process.stdout.write(`Your name is: ${name}`);
   process.stdout.write('This important software is now closing\n');
   process.stdin.end();
 });
