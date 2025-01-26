@@ -1,20 +1,27 @@
 const fs = require('fs');
 
-function countStudents(filePath) {
-  if (!fs.existsSync(filePath)) {
+/**
+ * Counts the students in a CSV data file.
+ * @param {String} dataPath The path to the CSV data file.
+ * @author Bezaleel Olakunori <https://github.com/B3zaleel>
+ */
+const countStudents = (dataPath) => {
+  if (!fs.existsSync(dataPath)) {
     throw new Error('Cannot load the database');
   }
-  if (!fs.statSync(filePath)) {
+  if (!fs.statSync(dataPath).isFile()) {
     throw new Error('Cannot load the database');
   }
-  const csvLines = fs.readFileSync(filePath, 'utf-8')
+  const fileLines = fs
+    .readFileSync(dataPath, 'utf-8')
     .toString('utf-8')
-    .trim().split('\n');
+    .trim()
+    .split('\n');
   const studentGroups = {};
-  const dbFieldNames = csvLines[0].split(',');
+  const dbFieldNames = fileLines[0].split(',');
   const studentPropNames = dbFieldNames.slice(0, dbFieldNames.length - 1);
 
-  for (const line of csvLines.slice(1)) {
+  for (const line of fileLines.slice(1)) {
     const studentRecord = line.split(',');
     const studentPropValues = studentRecord.slice(0, studentRecord.length - 1);
     const field = studentRecord[studentRecord.length - 1];
@@ -34,6 +41,6 @@ function countStudents(filePath) {
     const studentNames = group.map((student) => student.firstname).join(', ');
     console.log(`Number of students in ${field}: ${group.length}. List: ${studentNames}`);
   }
-}
+};
 
 module.exports = countStudents;
